@@ -1,11 +1,15 @@
 import Head from 'next/head'
 import styles from '../styles.module.css'
 
-export default function Home() {
-  console.log("Hello");
-  const dt = new Date();
-  console.log(dt)
-  const hello = "Hello React";
+export default function Home(props) {
+
+  //Count Down実装
+  var d = new Date('2021-05-04 17:00:00');
+  var now = new Date()
+  // console.log(now)
+  var diff = (d.getTime() - now.getTime()) / (1000 * 60 * 60 * 24);
+  // console.log(diff);
+
   return (
     <div className="container">
       <Head>
@@ -19,7 +23,7 @@ export default function Home() {
           Welcome to <a href="https://nextjs.org">my blog</a>
         </h1>
         <p>
-      {hello}
+      {diff}
     </p>
       </main>
 
@@ -146,3 +150,6 @@ export default function Home() {
     </div>
   )
 }
+
+// 毎秒読み込み
+// setInterval(Home, 1000);
