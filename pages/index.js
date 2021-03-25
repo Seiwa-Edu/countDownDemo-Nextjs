@@ -2,6 +2,10 @@ import Head from 'next/head'
 import styles from '../styles.module.css'
 
 export default function Home() {
+  console.log("Hello");
+  const dt = new Date();
+  console.log(dt)
+  const hello = "Hello React";
   return (
     <div className="container">
       <Head>
@@ -14,6 +18,9 @@ export default function Home() {
           {/* こちらに時刻をいれる */}
           Welcome to <a href="https://nextjs.org">my blog</a>
         </h1>
+        <p>
+      {hello}
+    </p>
       </main>
 
       <footer>
