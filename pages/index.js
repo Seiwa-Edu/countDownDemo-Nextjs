@@ -29,7 +29,7 @@ export default function Home(props) {
 
       <footer>
         <a
-          href="https://vercel.com?utm_source=create-next-app&utm_medium=default-template&utm_campaign=create-next-app"
+          href="#"
           target="_blank"
           rel="noopener noreferrer"
         >
@@ -152,4 +152,4 @@ export default function Home(props) {
 }
 
 // 毎秒読み込み
-// setInterval(Home, 1000);
+setInterval(Home, 1000);
